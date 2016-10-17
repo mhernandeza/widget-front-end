@@ -13,23 +13,24 @@ var http_1 = require('@angular/http');
 require('rxjs/add/operator/toPromise');
 require('rxjs/add/operator/map');
 require('rxjs/add/operator/catch');
+var tweet_1 = require('./tweet');
 var TweetService = (function () {
     function TweetService(http) {
         this.http = http;
         this.tweets = [];
     }
     TweetService.prototype.getTweets = function () {
+        var _this = this;
         console.log('Get tweets runs.');
-        /*return this.http.get("http://localhost:8080/widget/webapi/profile")
-            .map(response => {
-                const data = response.json();
-                console.log(data);
-            })
-            .catch(error => Observable.throw(error.json()));*/
         this.http.get("http://localhost:8080/widget/webapi/profile").toPromise()
             .then(function (response) {
             var data = response.json();
-            console.log(data);
+            for (var _i = 0, data_1 = data; _i < data_1.length; _i++) {
+                var tweet = data_1[_i];
+                var entryTweet = new tweet_1.Tweet(tweet.text, new Date(tweet.creationDate), tweet.id, tweet.authorName, tweet.profileImage, tweet.screenName);
+                _this.tweets.push(entryTweet);
+            }
+            console.log(_this.tweets);
         })
             .catch(function (error) { return console.error(error); });
     };

@@ -17,17 +17,15 @@ export class TweetService {
 
 	getTweets(){
 		console.log('Get tweets runs.');
-		/*return this.http.get("http://localhost:8080/widget/webapi/profile")
-			.map(response => {
-				const data = response.json();
-				console.log(data);
-			})
-			.catch(error => Observable.throw(error.json()));*/
-	
+			
 		this.http.get("http://localhost:8080/widget/webapi/profile").toPromise()
 			.then(response => {
 				const data = response.json();
-				console.log(data);	
+				for(let tweet of data){
+					const entryTweet = new Tweet(tweet.text, new Date(tweet.creationDate), tweet.id, tweet.authorName, tweet.profileImage, tweet.screenName); 
+					this.tweets.push(entryTweet);
+				}
+				console.log(this.tweets);
 			})
 			.catch(error => console.error(error));
 	}

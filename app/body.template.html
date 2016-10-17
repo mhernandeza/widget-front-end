@@ -1,0 +1,7 @@
+<section *ngFor = "let tweet of tweetService.tweets">
+	<img src="{{tweet.profileImage}}"/>
+	<h3>{{tweet.authorName}}</h3>
+	<h3>{{tweet.creationDate.getDate()}} {{monthNames[tweet.creationDate.getMonth()]}}</h3>
+	<p>@{{tweet.screenName}}</p>
+	<p>{{tweet.text}}</p>
+</section>

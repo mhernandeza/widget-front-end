@@ -20,7 +20,7 @@ var AppComponent = (function () {
     AppComponent = __decorate([
         core_1.Component({
             selector: 'my-app',
-            template: "<my-header></my-header> \n  \t\t\t<h1>Widget body</h1>",
+            template: "<my-header></my-header> \n  \t\t\t <my-body></my-body>\n\t\t\t <my-footer></my-footer>",
             providers: [tweet_service_1.TweetService]
         }), 
         __metadata('design:paramtypes', [tweet_service_1.TweetService])

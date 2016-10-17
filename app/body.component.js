@@ -10,19 +10,20 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var tweet_service_1 = require('./tweet.service');
-var HeaderComponent = (function () {
-    function HeaderComponent(tweetService) {
+var BodyComponent = (function () {
+    function BodyComponent(tweetService) {
         this.tweetService = tweetService;
+        this.monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
     }
-    HeaderComponent = __decorate([
+    BodyComponent = __decorate([
         core_1.Component({
             moduleId: module.id,
-            selector: 'my-header',
-            templateUrl: 'header.template.html'
+            selector: 'my-body',
+            templateUrl: 'body.template.html'
         }), 
         __metadata('design:paramtypes', [tweet_service_1.TweetService])
-    ], HeaderComponent);
-    return HeaderComponent;
+    ], BodyComponent);
+    return BodyComponent;
 }());
-exports.HeaderComponent = HeaderComponent;
-//# sourceMappingURL=header.component.js.map
+exports.BodyComponent = BodyComponent;
+//# sourceMappingURL=body.component.js.map

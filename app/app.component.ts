@@ -4,7 +4,8 @@ import { TweetService } from './tweet.service';
 @Component({
   selector: 'my-app',
   template: `<my-header></my-header> 
-  			<h1>Widget body</h1>`,
+  			 <my-body></my-body>
+			 <my-footer></my-footer>`,
   providers: [TweetService]
 })
 

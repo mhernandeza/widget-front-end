@@ -10,19 +10,19 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var tweet_service_1 = require('./tweet.service');
-var HeaderComponent = (function () {
-    function HeaderComponent(tweetService) {
+var FooterComponent = (function () {
+    function FooterComponent(tweetService) {
         this.tweetService = tweetService;
     }
-    HeaderComponent = __decorate([
+    FooterComponent = __decorate([
         core_1.Component({
             moduleId: module.id,
-            selector: 'my-header',
-            templateUrl: 'header.template.html'
+            selector: 'my-footer',
+            templateUrl: 'footer.template.html'
         }), 
         __metadata('design:paramtypes', [tweet_service_1.TweetService])
-    ], HeaderComponent);
-    return HeaderComponent;
+    ], FooterComponent);
+    return FooterComponent;
 }());
-exports.HeaderComponent = HeaderComponent;
-//# sourceMappingURL=header.component.js.map
+exports.FooterComponent = FooterComponent;
+//# sourceMappingURL=footer.component.js.map

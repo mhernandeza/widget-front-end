@@ -13,13 +13,15 @@ var platform_browser_1 = require('@angular/platform-browser');
 var http_1 = require('@angular/http');
 var app_component_1 = require('./app.component');
 var header_component_1 = require('./header.component');
+var body_component_1 = require('./body.component');
+var footer_component_1 = require('./footer.component');
 var AppModule = (function () {
     function AppModule() {
     }
     AppModule = __decorate([
         core_1.NgModule({
             imports: [platform_browser_1.BrowserModule, http_1.HttpModule],
-            declarations: [app_component_1.AppComponent, header_component_1.HeaderComponent],
+            declarations: [app_component_1.AppComponent, header_component_1.HeaderComponent, body_component_1.BodyComponent, footer_component_1.FooterComponent],
             bootstrap: [app_component_1.AppComponent]
         }), 
         __metadata('design:paramtypes', [])
