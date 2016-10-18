@@ -1,0 +1,52 @@
+@twitter-color: #1DA1F2;
+@name-date: #AAB8C2;
+@hover-tweet: #F5F8FA;
+@tweet-text: #657786;
+@white: #FFFFFF;
+@avatar-size: 110px;
+@padding-size: 10px;
+
+.border-radius (@radius: 5px) {
+	-webkit-border-radius: @radius;
+	-moz-border-radius: @radius;
+	border-radius: @radius;
+}
+
+
+.row{
+	padding-top: @padding-size;
+	padding-bottom: @padding-size;
+	background: @white;
+	color: @twitter-color;
+	text-align:left;
+	div{
+		padding-left:0;
+		padding-right:0;
+	}
+	p{
+		color:@name-date;
+	}
+	.col-xs-8{
+		padding:@padding-size;
+		text-align: left;
+	}
+	&:hover{
+		background: @hover-tweet;
+	}
+	.tweet-text{
+		color: @tweet-text;
+	}
+	#tweetTop{
+		h4,p{
+			display: inline;
+		}
+		p{
+			float: right; 
+		}
+	}
+	img{
+		.border-radius();
+		width: @avatar-size;
+		height: @avatar-size;
+	}
+}

@@ -24,6 +24,7 @@ var TweetService = (function () {
         console.log('Get tweets runs.');
         this.http.get("http://localhost:8080/widget/webapi/profile").toPromise()
             .then(function (response) {
+            _this.tweets = [];
             var data = response.json();
             for (var _i = 0, data_1 = data; _i < data_1.length; _i++) {
                 var tweet = data_1[_i];
@@ -32,7 +33,26 @@ var TweetService = (function () {
             }
             console.log(_this.tweets);
         })
-            .catch(function (error) { return console.error(error); });
+            .catch(function (error) {
+            console.error(error);
+        });
+    };
+    TweetService.prototype.getProfile = function (username) {
+        var _this = this;
+        this.http.get("http://localhost:8080/widget/webapi/profile/" + username).toPromise()
+            .then(function (response) {
+            _this.tweets = [];
+            var data = response.json();
+            for (var _i = 0, data_2 = data; _i < data_2.length; _i++) {
+                var tweet = data_2[_i];
+                var entryTweet = new tweet_1.Tweet(tweet.text, new Date(tweet.creationDate), tweet.id, tweet.authorName, tweet.profileImage, tweet.screenName);
+                _this.tweets.push(entryTweet);
+            }
+            console.log(_this.tweets);
+        })
+            .catch(function (error) {
+            console.error(error);
+        });
     };
     TweetService = __decorate([
         core_1.Injectable(), 

@@ -18,7 +18,8 @@ var FooterComponent = (function () {
         core_1.Component({
             moduleId: module.id,
             selector: 'my-footer',
-            templateUrl: 'footer.template.html'
+            templateUrl: './html/footer.template.html',
+            styleUrls: ['./css/footer.style.css']
         }), 
         __metadata('design:paramtypes', [tweet_service_1.TweetService])
     ], FooterComponent);

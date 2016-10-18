@@ -20,6 +20,7 @@ export class TweetService {
 			
 		this.http.get("http://localhost:8080/widget/webapi/profile").toPromise()
 			.then(response => {
+				this.tweets = [];
 				const data = response.json();
 				for(let tweet of data){
 					const entryTweet = new Tweet(tweet.text, new Date(tweet.creationDate), tweet.id, tweet.authorName, tweet.profileImage, tweet.screenName); 
@@ -27,7 +28,26 @@ export class TweetService {
 				}
 				console.log(this.tweets);
 			})
-			.catch(error => console.error(error));
+			.catch(error => {
+				console.error(error);
+			});
+	}
+
+	getProfile(username: String){
+			
+		this.http.get("http://localhost:8080/widget/webapi/profile/"+username).toPromise()
+			.then(response => {
+				this.tweets = [];
+				const data = response.json();
+				for(let tweet of data){
+					const entryTweet = new Tweet(tweet.text, new Date(tweet.creationDate), tweet.id, tweet.authorName, tweet.profileImage, tweet.screenName); 
+					this.tweets.push(entryTweet);
+				}
+				console.log(this.tweets);
+			})
+			.catch(error => {
+				console.error(error);
+			});
 	}
 
 }

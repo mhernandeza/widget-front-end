@@ -1,16 +1,18 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
-import { TweetService } from './tweet.service';
+import { Tweet } from './tweet';
 
 @Component({
-	moduleId:module.id,
+	moduleId: module.id,	
 	selector: 'my-body',
-	templateUrl: 'body.template.html'
+	templateUrl: './html/body.template.html',
+	styleUrls: ['./css/body.style.css']
 })
 
 export class BodyComponent{
 
-	constructor (private tweetService: TweetService){}	
+	@Input() tweet: Tweet;
 
 	monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+
 }

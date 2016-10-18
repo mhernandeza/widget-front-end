@@ -9,25 +9,21 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var tweet_1 = require('./tweet');
-var BodyComponent = (function () {
-    function BodyComponent() {
-        this.monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+var tweet_service_1 = require('./tweet.service');
+var TweetListComponent = (function () {
+    function TweetListComponent(tweetService) {
+        this.tweetService = tweetService;
     }
-    __decorate([
-        core_1.Input(), 
-        __metadata('design:type', tweet_1.Tweet)
-    ], BodyComponent.prototype, "tweet", void 0);
-    BodyComponent = __decorate([
+    TweetListComponent = __decorate([
         core_1.Component({
             moduleId: module.id,
-            selector: 'my-body',
-            templateUrl: './html/body.template.html',
-            styleUrls: ['./css/body.style.css']
+            selector: 'my-tweet-list',
+            templateUrl: './html/tweet-list.template.html',
+            styleUrls: ['./css/tweet-list.style.css']
         }), 
-        __metadata('design:paramtypes', [])
-    ], BodyComponent);
-    return BodyComponent;
+        __metadata('design:paramtypes', [tweet_service_1.TweetService])
+    ], TweetListComponent);
+    return TweetListComponent;
 }());
-exports.BodyComponent = BodyComponent;
-//# sourceMappingURL=body.component.js.map
+exports.TweetListComponent = TweetListComponent;
+//# sourceMappingURL=tweet-list.component.js.map

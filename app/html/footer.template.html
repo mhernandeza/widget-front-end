@@ -1,0 +1,9 @@
+<footer>
+	<section class="container">
+		<div class="row">
+			<div class="col-xs-12">
+				<input *ngIf = "tweetService.tweets.length > 0" class="form-control" id="tweetTo" placeholder="Tweet to @{{tweetService.tweets[0].screenName}}"/>
+			</div>
+		</div>
+	</section>
+</footer>

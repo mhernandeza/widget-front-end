@@ -1,21 +1,10 @@
 var gulp = require('gulp');
-var changed = require('gulp-changed');
 var plumber = require('gulp-plumber');
 var less = require('gulp-less');
 var clean = require('gulp-clean');
 
-var SRC = './pre-less/*.less';
-var DEST = './app/css/*.css';
-
-gulp.task('changed', function(){
-	return gulp.src(SRC)
-		.pipe(plumber())
-		.pipe(changed(DEST))
-		.pipe(gulp.dest(DEST));
-});
-
 gulp.task('watch', function(){
-	gulp.watch(SRC, ['less']);
+	gulp.watch('./pre-less/*.less', ['less']);
 });
 
 gulp.task('less', function() {

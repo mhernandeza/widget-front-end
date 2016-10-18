@@ -1,0 +1,13 @@
+<header>
+	<section class="container">
+		<div class="row">
+			<div class="col-xs-4">
+				<h2>Tweets</h2>
+			</div>
+			<div class="col-xs-8" id="followButton">
+				<img src="./app/assets/Twitter_Logo_Blue.png" />
+				<div *ngIf = "tweetService.tweets.length > 0"  class="well well-sm"> Follow @{{tweetService.tweets[0].screenName}}</div>
+			</div>
+		</div>
+	</section>
+</header>

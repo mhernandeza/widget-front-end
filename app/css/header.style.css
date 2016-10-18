@@ -1,0 +1,33 @@
+header {
+  position: fixed;
+  top: 0;
+  height: 70px;
+  width: 100%;
+  bottom: auto;
+  z-index: 10;
+  background: #1da1f2;
+  color: #ffffff;
+}
+header button {
+  margin-top: 20px;
+}
+header .row {
+  text-align: center;
+}
+header #followButton {
+  padding-top: 20px;
+  float: right;
+}
+header #followButton img,
+header #followButton div {
+  display: inline;
+}
+header #followButton img {
+  width: 36px;
+  height: 36px;
+}
+header #followButton div {
+  color: #1da1f2;
+  background: #ffffff;
+  height: 36px;
+}

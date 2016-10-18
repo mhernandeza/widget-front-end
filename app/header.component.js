@@ -18,7 +18,8 @@ var HeaderComponent = (function () {
         core_1.Component({
             moduleId: module.id,
             selector: 'my-header',
-            templateUrl: 'header.template.html'
+            templateUrl: './html/header.template.html',
+            styleUrls: ['./css/header.style.css']
         }), 
         __metadata('design:paramtypes', [tweet_service_1.TweetService])
     ], HeaderComponent);

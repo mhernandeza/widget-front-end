@@ -5,7 +5,8 @@ import { TweetService } from './tweet.service';
 @Component({
 	moduleId:module.id,
 	selector: 'my-footer',
-	templateUrl: 'footer.template.html'
+	templateUrl: './html/footer.template.html',
+	styleUrls: ['./css/footer.style.css']
 })
 
 export class FooterComponent{

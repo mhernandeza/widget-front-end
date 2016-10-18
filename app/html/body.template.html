@@ -1,0 +1,13 @@
+<div class="row">
+	<div class="col-xs-4">
+		<img src="{{tweet.profileImage}}"/>
+	</div>
+	<div class="col-xs-8">
+		<div id="tweetTop">
+			<h4>{{tweet.authorName}}</h4>
+			<p>{{tweet.creationDate.getDate()}} {{monthNames[tweet.creationDate.getMonth()]}}</p>
+		</div>
+		<p>@{{tweet.screenName}}</p>
+		<p class="tweet-text">{{tweet.text}}</p>
+	</div>
+</div>

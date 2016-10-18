@@ -1,0 +1,39 @@
+@twitter-color: #1DA1F2;
+@white: #FFFFFF;
+@height: 70px;
+@padding-size: 20px;
+@button-size: 36px;
+
+header{
+	position:fixed;
+	top: 0;
+	height: @height;
+	width: 100%;
+    bottom: auto;
+	z-index:10;
+	background: color(@twitter-color);
+	color: color(@white);
+	button{
+		margin-top: @padding-size;
+	}
+	.row{
+		text-align: center;
+	}
+	#followButton{
+		padding-top: @padding-size;
+		float:right;
+		img, div{
+			display:inline;
+		}
+		img{
+			width: @button-size;
+			height: @button-size;
+			
+		}
+		div{
+			color: @twitter-color;
+			background:@white;
+			height:@button-size;
+		}
+	}
+}
